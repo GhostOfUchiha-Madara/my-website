@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>welcome website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li class="dropdown">
+                    <a href="#product" class="dropbtn">Product</a>
+                    <div class="dropdown-content">
+                        <a href="#halua">Halua</a>
+                        <a href="#pudi">Pudi</a>
+                        <a href="#sabji">Sabji</a>
+                        <a href="#chana">Chana</a>
+                        <a href="#kheer">Kheer</a>
+                    </div>
+                </li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to My Website</h1>
+                <p>This is a simple webpage created using HTML and CSS.</p>
+            </div>
+        </section>
+        <section id="images">
+            <h2>Gallery</h2>
+            <div class="image-row">
+                <div class="image-container"><img src="hero-image.avif" alt="Image 1"></div>
+                <div class="image-container"><img src="hero-image.avif" alt="Image 2"></div>
+                <div class="image-container"><img src="hero-image.avif" alt="Image 3"></div>
+            </div>
+            <div class="image-row">
+                <div class="image-container"><img src="hero-image.avif" alt="Image 4"></div>
+                <div class="image-container"><img src="hero-image.avif" alt="Image 5"></div>
+                <div class="image-container"><img src="hero-image.avif" alt="Image 6"></div>
+            </div>
+        </section>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Here you can learn more about this project.</p>
+        </section>
+        <section id="Gallery">
+            <div class="video-row">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/qK5Sdo4YdMc?si=i6vL6hUYAAUxXVrm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/vjKo_kH-pWw?si=sXAhJuxIWHIAP7DD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/w9lsR2tvkvQ?si=PRsmoJr9ibFxo8Ac" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            </div>
+        </section>
+        <section id="product">
+            <h2>Product</h2>
+            <p>Explore our latest products and offerings.</p>
+            <section id="halua">
+                <h3>Halua</h3>
+                <p>Details about Halua.</p>
+            </section>
+            <section id="pudi">
+                <h3>Pudi</h3>
+                <p>Details about Pudi.</p>
+            </section>
+            <section id="sabji">
+                <h3>Sabji</h3>
+                <p>Details about Sabji.</p>
+            </section>
+            <section id="chana">
+                <h3>Chana</h3>
+                <p>Details about Chana.</p>
+            </section>
+            <section id="kheer">
+                <h3>Kheer</h3>
+                <p>Details about Kheer.</p>
+            </section>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>You can reach me at <a href="mailto:your.email@example.com">your.email@example.com</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About Us</h2>
+                <p>We are dedicated to providing the best services and products to our customers. Stay connected with us through our social media channels.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#product">Products</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <a href="#"><img src="icons/facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="icons/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="icons/instagram.png" alt="Instagram"></a>
+                <a href="#"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Basic Frontend Example. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Modal Structure -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="modalVideo" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript for Dropdown Menu Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            var dropdowns = document.querySelectorAll('.dropdown');
+            dropdowns.forEach(function(dropdown) {
+                dropdown.addEventListener('mouseenter', function() {
+                    var dropdownContent = this.querySelector('.dropdown-content');
+                    dropdownContent.style.display = 'block';
+                    dropdownContent.style.opacity = 0;
+                    setTimeout(function() {
+                        dropdownContent.style.opacity = 1;
+                    }, 0);
+                });
+
+                dropdown.addEventListener('mouseleave', function() {
+                    var dropdownContent = this.querySelector('.dropdown-content');
+                    dropdownContent.style.opacity = 0;
+                    setTimeout(function() {
+                        dropdownContent.style.display = 'none';
+                    }, 300); // Match this with the CSS transition duration
+                });
+            });
+
+            /*JavaScript for Modal Pop-ups
+            var modal = document.getElementById('videoModal');
+            var modalVideo = document.getElementById('modalVideo');
+            var closeBtn = document.querySelector('.close');
+
+            document.querySelectorAll('.video-thumbnail').forEach(function(thumbnail) {
+                thumbnail.addEventListener('click', function() {
+                    var videoSrc = this.getAttribute('data-video');
+                    modalVideo.src = videoSrc;
+                    modal.style.display = 'block';
+                });
+            });
+
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+                modalVideo.src = ''; // Stop the video
+            });
+
+            window.addEventListener('click', function(event) {
+                if (event.target == modal) {
+                    modal.style.display = 'none';
+                    modalVideo.src = ''; // Stop the video
+                }
+            });*/
+            
+        });
+    </script>
+    <script>
+        // JavaScript for smooth scrolling
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('nav ul li a');
+    
+            for (const link of links) {
+                link.addEventListener('click', smoothScroll);
+            }
+    
+            function smoothScroll(event) {
+                event.preventDefault();
+    
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+    
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    </script>
+    
+
+</body>
+</html>
