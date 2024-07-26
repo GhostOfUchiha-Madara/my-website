@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // JavaScript for smooth scrolling
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
     const links = document.querySelectorAll('nav ul li a');
 
     for (const link of links) {
@@ -42,4 +42,4 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
-});
+});*/
