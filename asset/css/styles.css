@@ -14,7 +14,7 @@
 header {
     background-color: var(--navbar-bg);
     color: white;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: center;
     position: sticky;
     top: 0;
@@ -25,7 +25,7 @@ header {
 .navbar {
     display: flex;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .navbar ul {
@@ -121,8 +121,8 @@ header {
     display: block;
 }
 /* Hero section */
-/*.hero {
- /*   position: relative;
+.hero {
+    position: relative;
     height: 100vh;
     background: url('../image/hero-image.jfif') no-repeat center center;
     background-size: cover;
@@ -136,33 +136,20 @@ header {
     z-index: 1;
 }*/
 
-/*.hero-content {
-  /*  z-index: 2;
+.hero-content {
+    z-index: 2;
     position: relative;
-}*/
+}
 
 /* Overlay to darken the background for better text readability */
-/*.hero::after {
-   /* content: "";
+.hero::after {
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}*/
-/* Hero section */
-.hero {
-    position: relative;
-    height: 100vh;
-    overflow: hidden; /* Ensure content does not overflow */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    font-size: 2rem;
     z-index: 1;
 }
 
@@ -347,12 +334,12 @@ footer {
     }
 
     .navbar ul {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
     .navbar ul li {
-        margin: 5px 0;
+        margin: 3px 0;
     }
     /*search*/
     
@@ -360,7 +347,7 @@ footer {
     .navbar-search {
         flex-direction: column; /* Stack input and button vertically */
         align-items: stretch;
-        margin: 10px 0; /* Add margin for spacing */
+        margin: 5px 0; /* Add margin for spacing */
     }
 
     .navbar-search input {
